@@ -1,3 +1,6 @@
+import lista.GrafoLista;
+import matriz.GrafoMatriz;
+
 import java.util.Scanner;
 
 public class Main {
@@ -13,9 +16,9 @@ public class Main {
 
         while (menu != 0) {
             if (menu == 1) {
-              operacoesEmMatrizes();
+                operacoesEmMatrizes();
             } else if (menu == 2) {
-                menuOperacoes("LISTA");
+                operacoesEmListas();
             } else if (menu == 3) {
                 executaTestes();
             } else {
@@ -26,16 +29,16 @@ public class Main {
         }
     }
 
-    void operacoesEmMatrizes(){
+    void operacoesEmMatrizes() {
         int opMatriz = menuOperacoes("MATRIZ");
 
         int x, y;
         GrafoMatriz grafoMatriz = null;
         Scanner scanner = new Scanner(System.in);
 
-        while(opMatriz != 0){
+        while (opMatriz != 0) {
 
-            switch (opMatriz){
+            switch (opMatriz) {
                 case 1:
                     System.out.println("Digite o tamanho do grafo, ex: 10");
                     int size = scanner.nextInt();
@@ -44,7 +47,7 @@ public class Main {
                     System.out.println("Grafo vazio criado!");
                     break;
                 case 2:
-                    if(grafoMatriz == null){
+                    if (grafoMatriz == null) {
                         System.out.println("Primeiro inicialize o grafo na opcao 1.");
                         return;
                     }
@@ -52,10 +55,10 @@ public class Main {
                     x = scanner.nextInt();
                     y = scanner.nextInt();
                     grafoMatriz.insereAresta(x, y);
-                    System.out.println("Aresta inserida:" + x +"-"+ y);
+                    System.out.println("lista.Aresta inserida:" + x + "-" + y);
                     break;
                 case 3:
-                    if(grafoMatriz == null){
+                    if (grafoMatriz == null) {
                         System.out.println("Primeiro inicialize o grafo na opcao 1.");
                         return;
                     }
@@ -63,10 +66,10 @@ public class Main {
                     x = scanner.nextInt();
                     y = scanner.nextInt();
                     grafoMatriz.removeAresta(x, y);
-                    System.out.println("Aresta removida:" + x +"-"+ y);
+                    System.out.println("lista.Aresta removida:" + x + "-" + y);
                     break;
                 case 4:
-                    if(grafoMatriz == null){
+                    if (grafoMatriz == null) {
                         System.out.println("Primeiro inicialize o grafo na opcao 1.");
                         return;
                     }
@@ -75,15 +78,15 @@ public class Main {
                     y = scanner.nextInt();
                     boolean existe = grafoMatriz.existeAresta(x, y);
 
-                    if(existe){
-                        System.out.println("\nAresta : " + x +"-"+ y + " existe");
-                    }else{
-                        System.out.println("\nAresta : " + x +"-"+ y + " nao encontrada");
+                    if (existe) {
+                        System.out.println("\nlista.Aresta : " + x + "-" + y + " existe");
+                    } else {
+                        System.out.println("\nlista.Aresta : " + x + "-" + y + " nao encontrada");
                     }
 
                     break;
                 case 5:
-                    if(grafoMatriz == null){
+                    if (grafoMatriz == null) {
                         System.out.println("Primeiro inicialize o grafo na opcao 1.");
                         return;
                     }
@@ -91,7 +94,7 @@ public class Main {
                     grafoMatriz.imprimeGrafo();
                     break;
                 case 6:
-                    if(grafoMatriz == null){
+                    if (grafoMatriz == null) {
                         System.out.println("Primeiro inicialize o grafo na opcao 1.");
                         return;
                     }
@@ -101,7 +104,7 @@ public class Main {
                     grafoMatriz.imprimeVizinhos(x);
                     break;
                 case 7:
-                    if(grafoMatriz == null){
+                    if (grafoMatriz == null) {
                         System.out.println("Primeiro inicialize o grafo na opcao 1.");
                         return;
                     }
@@ -148,6 +151,110 @@ public class Main {
         }
     }
 
+    void operacoesEmListas() {
+        int opListas = menuOperacoes("LISTAS");
+        GrafoLista grafoLista = new GrafoLista();
+        Scanner scanner = new Scanner(System.in);
+
+        while (opListas != 0) {
+            switch (opListas) {
+                case 1:
+                    System.out.println("Digite o tamanho do grafo: ex 10");
+                    int tamanho = scanner.nextInt();
+                    grafoLista.criaGrafoVazio();
+
+                    System.out.println("Entre com os valores dos vertices ex (A B C D E F G) ou (1 2 3 4 5 6 7) ");
+
+                    for (int i = 0; i < tamanho; i++) {
+                        String key = scanner.next();
+                        grafoLista.insereVertice(key);
+                    }
+
+                    System.out.println("Grafo lista criado!");
+                    System.out.println();
+                    break;
+                case 2:
+                    System.out.println("Inserir aresta (ex: A -> B)");
+
+                    if (grafoLista.grafoLista.size() <= 1) {
+                        System.out.println("Por favor insira pelo menos dois vertices (opcao 1)");
+                    } else {
+                        System.out.println("Vertice origem:");
+                        String v1Name = scanner.next();
+                        System.out.println("Vertice destino:");
+                        String v2Name = scanner.next();
+
+                        grafoLista.insereAresta(v1Name, v2Name);
+                        System.out.println("Aresta inserida entre '" + v1Name + " e " + v2Name + "'");
+                    }
+
+                    break;
+                case 3:
+                    System.out.println("Remove aresta");
+                    System.out.println("Vertice origem:");
+                    String v1 = scanner.next();
+                    System.out.println("Vertice destino:");
+                    String v2 = scanner.next();
+                    grafoLista.removeAresta(v1, v2);
+                    System.out.println("Arestas removidas");
+                    break;
+                case 4:
+                    System.out.println("Verifica se existe aresta:");
+                    System.out.println("Vertice origem:");
+                    String v1Name = scanner.next();
+                    System.out.println("Vertice destino:");
+                    String v2Name = scanner.next();
+                    int index = grafoLista.existeAresta(v1Name, v2Name);
+
+                    System.out.println(index != -1 ? "Existe aresta" : "Nao existe aresta");
+                    break;
+                case 5:
+                    grafoLista.imprimeGrafo();
+                    break;
+                case 6:
+                    System.out.println("Lisar os vizinhos do vertice:");
+                    String vertice = scanner.next();
+                    grafoLista.listarVizinhos(vertice);
+                    break;
+                case 7:
+                    System.out.println("Grau do vertice:");
+                    String gVertice = scanner.next();
+                    grafoLista.grauVertice(gVertice);
+                    break;
+                case 8:
+                    System.out.println("Gerar grafo completo:");
+                    System.out.println("Digite o tamanho:");
+                    int size = scanner.nextInt();
+                    GrafoLista L_COMPLETO = new GrafoLista();
+                    L_COMPLETO.criarGrafoCompleto(size);
+                    break;
+                case 9:
+                    System.out.println("Gerar grafo ciclo:");
+                    System.out.println("Digite o tamanho:");
+                    int k = scanner.nextInt();
+                    GrafoLista L_CICLO = new GrafoLista();
+                    L_CICLO.criarGrafoCiclo(k);
+                    break;
+                case 10:
+                    System.out.println("Gerar grafo caminho:");
+                    System.out.println("Digite o tamanho:");
+                    int x = scanner.nextInt();
+                    GrafoLista L_CAMINHO = new GrafoLista();
+                    L_CAMINHO.criarGrafoCaminho(x);
+                    break;
+                case 11:
+                    System.out.println("Gerar grafo aleatorio:");
+                    System.out.println("Digite o tamanho:");
+                    int y = scanner.nextInt();
+                    GrafoLista L_ALEATORIO = new GrafoLista();
+                    L_ALEATORIO.criarGrafoAleatorio(y);
+                    break;
+            }
+
+            opListas = menuOperacoes("LISTAS");
+        }
+    }
+
     int menuPrincipal() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("--==Operacoes em grafos==--");
@@ -181,8 +288,8 @@ public class Main {
     /**
      * Executa os testes referentes a questao 4
      */
-     void executaTestes() {
-        //a)
+    void executaTestes() {
+        //a) b)
 
         //imprime o numero de arestas de cada grafo
         GrafoMatriz K_10 = new GrafoMatriz(10);
@@ -191,58 +298,43 @@ public class Main {
         K_100.criaGrafoCompleto();
         GrafoMatriz K_1000 = new GrafoMatriz(1000);
         K_1000.criaGrafoCompleto();
-
-        //(b)
         System.out.println("Grafos completos criados com sucesso!");
+        System.out.println("Numero de arestas do grafo K_10 = " + K_10.numeroArestasDoGrafoCompleto());
+        System.out.println("Numero de arestas do grafo K_100 = " + K_100.numeroArestasDoGrafoCompleto());
+        System.out.println("Numero de arestas do grafo K_100 = " + K_1000.numeroArestasDoGrafoCompleto());
+        System.out.println();
 
-        //TODO imprimir as arestas
         //inicio (c, d)
-        GrafoLista C_10 = new GrafoLista();
-        GrafoLista P_10 = new GrafoLista();
+        System.out.println("--Lista de adjacencia--");
 
-        GrafoLista.Vertice a = C_10.addVertice("a");
-        GrafoLista.Vertice b = C_10.addVertice("b");
-        GrafoLista.Vertice c = C_10.addVertice("c");
-        GrafoLista.Vertice d = C_10.addVertice("d");
-        GrafoLista.Vertice e = C_10.addVertice("e");
-        GrafoLista.Vertice f = C_10.addVertice("f");
-        GrafoLista.Vertice g = C_10.addVertice("g");
-        GrafoLista.Vertice h = C_10.addVertice("h");
-        GrafoLista.Vertice i = C_10.addVertice("i");
-        GrafoLista.Vertice j = C_10.addVertice("j");
+        System.out.println("Grafo Caminho");
+        GrafoLista L_CAMINHO = new GrafoLista();
+        L_CAMINHO.generateList();//cria uma lista com 10 vertices
+        L_CAMINHO.insereAresta("A", "B");
+        L_CAMINHO.insereAresta("A", "C");
+        L_CAMINHO.insereAresta("A", "D");
+        L_CAMINHO.insereAresta("A", "E");
+        L_CAMINHO.insereAresta("A", "F");
+        L_CAMINHO.insereAresta("A", "G");
+        L_CAMINHO.insereAresta("A", "H");
+        L_CAMINHO.insereAresta("A", "I");
+        L_CAMINHO.imprimeGrafo();
 
-        C_10.addAresta(a, b);
-        C_10.addAresta(c, d);
-        C_10.addAresta(d, e);
-        C_10.addAresta(f, g);
-        C_10.addAresta(h, i);
-        C_10.addAresta(i, j);
-        C_10.addAresta(j, a);
+        System.out.println("Grafo ciclo");
+        GrafoLista L_CICLO = new GrafoLista();
+        L_CICLO.generateList();//cria uma lista com 10 vertices
+        L_CICLO.insereAresta("A", "B");
+        L_CICLO.insereAresta("B", "C");
+        L_CICLO.insereAresta("C", "D");
+        L_CICLO.insereAresta("D", "E");
+        L_CICLO.insereAresta("E", "F");
+        L_CICLO.insereAresta("F", "G");
+        L_CICLO.insereAresta("G", "H");
+        L_CICLO.insereAresta("H", "I");
+        L_CICLO.insereAresta("I", "J");
+        L_CICLO.insereAresta("J", "A");
+        L_CICLO.imprimeGrafo();
 
-        C_10.addAresta(a, d);
-        C_10.addAresta(c, h);
-        C_10.addAresta(c, i);
-
-        //Cria um grafo caminho
-        GrafoLista.Vertice xx = P_10.addVertice("a");
-        GrafoLista.Vertice bb = P_10.addVertice("b");
-        GrafoLista.Vertice ee = P_10.addVertice("e");
-        GrafoLista.Vertice ff = P_10.addVertice("f");
-        GrafoLista.Vertice gg = P_10.addVertice("g");
-        GrafoLista.Vertice ii = P_10.addVertice("i");
-        GrafoLista.Vertice jj = P_10.addVertice("j");
-
-        P_10.addAresta(xx, bb);
-        P_10.addAresta(bb, ee);
-        P_10.addAresta(ee, ff);
-        P_10.addAresta(gg, ii);
-        P_10.addAresta(ii, jj);
-
-        System.out.println("Grafo caminho (vizinhanca):");
-        C_10.imprimeVizinhos();
-        System.out.println("Grafo ciclo (vizinhanca):");
-        P_10.imprimeVizinhos();
-         System.out.println();
         //fim (c, d)
 
         //cria um grafo aleatorio G 10
@@ -251,7 +343,7 @@ public class Main {
         System.out.println("Grafo G_10 aleatorio criado com sucesso!");
         //Imprime grafo aleatorio
         G_RANDOM.imprimeGrafo();
-         System.out.println();
+        System.out.println();
         //Imprime o grau maximo do grafo G_10 aleatorio
         int grauMaximo = G_RANDOM.grauMax();
         int verticeComMaiorGrau = G_RANDOM.verticeComMaiorGrau();
@@ -269,6 +361,8 @@ public class Main {
     }
 
 }
+
+
 
 
 
