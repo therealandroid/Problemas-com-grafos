@@ -1,4 +1,4 @@
-package matriz;/*
+package main.trabalho_01.matriz;/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -79,7 +79,7 @@ public class GrafoMatriz {
         int[] vizinhos = new int[mat.length];
         int j = 0;
 
-        //itera sobre a coluna da matriz no vertice
+        //itera sobre a coluna da main.trabalho_01.matriz no vertice
         for (int i = 0; i < mat.length; i++) {
             if (mat[vertice][i] == 1) {
                 vizinhos[j++] = i;
@@ -105,13 +105,13 @@ public class GrafoMatriz {
         return vizinhos;
     }
 
-    //Grau de um no/vertice e definido pela soma da linha da matriz, ou seja, pela quantidade de vertices que incidem nesse mesmo vertice [V]. Referencia: guj.com.br/t/duvida-logica/37119
+    //Grau de um no/vertice e definido pela soma da linha da main.trabalho_01.matriz, ou seja, pela quantidade de vertices que incidem nesse mesmo vertice [V]. Referencia: guj.com.br/t/duvida-logica/37119
     public int grau(int v) {
         int d = 0;
 
-        //pega a linha da matriz na posicao do vertice buscado [V]
+        //pega a linha da main.trabalho_01.matriz na posicao do vertice buscado [V]
         for (int j = 0; j < mat[v].length; j++) {
-            if (mat[v][j] != 0) {//Verifica todas as incidencias na linha da matriz [V] que sao diferentes de zero e soma para descobrir o grau
+            if (mat[v][j] != 0) {//Verifica todas as incidencias na linha da main.trabalho_01.matriz [V] que sao diferentes de zero e soma para descobrir o grau
                 d++;
             }
         }
@@ -151,10 +151,10 @@ public class GrafoMatriz {
     public int grauMax() {
         int d = 0;
 
-        //pega a linha da matriz na posicao do vertice buscado [V]
+        //pega a linha da main.trabalho_01.matriz na posicao do vertice buscado [V]
         for (int i = 0; i < mat.length; i++) {
             for (int j = 0; j < mat.length; j++) {
-                if (mat[i][j] != 0) {//Verifica todas as incidencias na linha da matriz [V] que sao diferentes de zero e soma o total para descobrir o grau
+                if (mat[i][j] != 0) {//Verifica todas as incidencias na linha da main.trabalho_01.matriz [V] que sao diferentes de zero e soma o total para descobrir o grau
                     d++;
                 }
             }
@@ -168,10 +168,10 @@ public class GrafoMatriz {
     public int grauMin() {
         int d = 0;
 
-        //pega a linha da matriz na posicao do vertice buscado [V]
+        //pega a linha da main.trabalho_01.matriz na posicao do vertice buscado [V]
         for (int i = 0; i < mat.length; i++) {
             for (int j = 0; j < mat.length; j++) {
-                if (mat[i][j] == 0) {//Verifica todas as incidencias na linha da matriz [V] que sao diferentes de zero e soma para descobrir o grau
+                if (mat[i][j] == 0) {//Verifica todas as incidencias na linha da main.trabalho_01.matriz [V] que sao diferentes de zero e soma para descobrir o grau
                     d++;
                 }
             }

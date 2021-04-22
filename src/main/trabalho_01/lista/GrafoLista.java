@@ -1,4 +1,4 @@
-package lista;
+package main.trabalho_01.lista;
 
 import java.util.ArrayList;
 import java.util.List;
