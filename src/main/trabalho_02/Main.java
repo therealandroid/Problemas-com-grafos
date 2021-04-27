@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         int testCases;
         Scanner scanner = new Scanner(System.in);
+        //Você deve primeiramente entrar com o número de casos de teste
         testCases = scanner.nextInt();
 
         for (int j = 0; j < testCases; j++) {
@@ -31,6 +32,10 @@ public class Main {
     }
 
     private void encontrarCidade(int C, int E, int L, int P, int j) {
+        if (C == 0 && E == 0 && L == 0 && P == 0) {
+            return;
+        }
+
         if (validaEntradas(C, E, L, P)) {
             Scanner scanner = new Scanner(System.in);
             Graph G = new Graph(C);
@@ -38,7 +43,7 @@ public class Main {
             //insere as estradas entre cidade x e y
             for (int i = 0; i < E; i++) {
                 int x, y;
-                //etapa que lê as estradas
+                //etapa que lê as entradas (estradas que ligam as cidades)
                 x = scanner.nextInt();
                 y = scanner.nextInt();
 
@@ -52,7 +57,7 @@ public class Main {
             //executa o algorítmo de busca em largura
             int[] v = G.BuscaLargura(L, P);
             //imprime o número do teste
-            System.out.println("Teste " + (j+1));
+            System.out.println("Teste " + (j + 1));
 
             //imprime a saída do teste j
             for (int k : v) {

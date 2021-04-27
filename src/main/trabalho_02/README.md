@@ -4,6 +4,17 @@
 
 2- Em seguida basta rodar a classe Main.
 
+3 - Você deve inserir primeiramente  o número dos casos de testes, em seguida
+digite os 4 números que indicam:
+
+```
+int C; //Número de cidades          - Identificação das cidades - 1 a C onde C >= 0 && C <= 50
+int E; //Número de estradas         - onde E >= 0 && <= 2500
+int L; //Cidade destino             - onde L >= 0 && <= C
+int P; //Número máximo de pedagios   - onde P >= 0 && <= C
+```
+4 - caso queira finalizar o programa basta digitar `0 0 0 0`
+
 ### Justificativa: 
 
 - Escolhi resolver o problema com a Busca em Largura (BFS).

@@ -4,17 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/src/Main.java" line="265" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="447359a0-1516-4777-a370-d4b8f0c0da64" name="Default Changelist" comment="Add: non-adjacent matrix operations">
-      <change afterPath="$PROJECT_DIR$/src/main/trabalho_02/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/trabalho_02/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/trabalho_02/README.md" afterDir="false" />
+    <list default="true" id="447359a0-1516-4777-a370-d4b8f0c0da64" name="Default Changelist" comment="Add trabalho 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TAD-Grafos/META-INF/TAD-Grafos.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/trabalho_01/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lista/GrafoLista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/trabalho_01/lista/GrafoLista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lista/Vertice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/trabalho_01/lista/Vertice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/matriz/GrafoMatriz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/trabalho_01/matriz/GrafoMatriz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/trabalho_02/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/trabalho_02/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/trabalho_02/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/trabalho_02/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +133,7 @@
       <recent name="main.trabalho_02" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="GFG" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.trabalho_02.GFG" />
       <module name="TAD-Grafos" />
@@ -194,9 +187,8 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="main.trabalho_01.Main" />
+      <option name="MAIN_CLASS_NAME" value="main.trabalho_02.Main" />
       <module name="TAD-Grafos" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -229,13 +221,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.GFG" />
+      <item itemvalue="Application.GrafoLista" />
+      <item itemvalue="Application.Graph" />
+      <item itemvalue="Application.Graph (1)" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Graph" />
         <item itemvalue="Application.Graph (1)" />
         <item itemvalue="Application.GFG" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617287045135</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add trabalho 2">
+      <created>1619125948649</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619125948649</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -307,7 +312,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add: non-adjacent matrix operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: non-adjacent matrix operations" />
+    <MESSAGE value="Add trabalho 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add trabalho 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
