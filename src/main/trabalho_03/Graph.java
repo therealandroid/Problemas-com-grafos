@@ -83,7 +83,7 @@ class Graph {
     }
 
     public void encontraCaminhoMinimo() {
-        Q.add(1);//Representa a arvore de vertices que possuem caminho mínimo
+        Q.add(1);//Representa a arvore geradora de vertices que possuem caminho mínimo
         vertices[1] = true;//inicia o primiero como visitado
 
         //cria um array com 3 posições para armazenar a aresta (vertice origem, destino e peso)

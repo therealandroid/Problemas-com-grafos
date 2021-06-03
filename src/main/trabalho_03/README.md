@@ -14,7 +14,7 @@ para as entradas do exercício.
 decidi usar uma abordagem mais simples utilizando o conceito de arvores geradoras (como falamos
   no forum e até então não sabia que estava seguindo esse conceito.) Após
   encontrar uma explicação que encontrei no `stackoverflow`, comecei a utilizar como
-  referência e consegui chegar na solução final do exercício. 
+  referência e consegui concluir a atividade. 
   
 - Escolhi usar Java pelo motivo de ter mais domínio
 
@@ -31,7 +31,11 @@ melhor explicado na sessão abaixo.
 - Uma lista `Q` mantém a arvore geradora, mas só é utilizada para calculo dos próximos vertices.
 - Um array `boolean[] vertices` mantém a ordem dos vertices já visitados.
 
-### Como o algorítimo resolve o problema?
+### Como o algorítimo resolve o problema? (sem utilizar prim e kruskal)
+
+O algorítmo resolve o problema pois ele consegue gerar uma arvore de custo mínimo.
+
+A execução do algorítimo é feita da seguinte forma:
 
 1 - Uma lista secundária, `int[][] arestas` (linha 91) é criada para manter a lista de arestas a partir
 do vertice de caminho mínimo encontrado (ele é encontrado sempre que `buscaCaminhoMinimo` (linha 55) é executado.

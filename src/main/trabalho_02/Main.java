@@ -1,7 +1,9 @@
 package main.trabalho_02;
 
 import java.util.*;
-
+/**
+ * @author Diogo Jayme
+ */
 public class Main {
 
     public static void main(String[] args) {

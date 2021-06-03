@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-
+/**
+ * @author Diogo Jayme
+ */
 // Essa classe representa uma lista de adjacencia
 class Graph {
 

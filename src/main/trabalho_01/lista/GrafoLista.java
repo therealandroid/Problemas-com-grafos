@@ -3,7 +3,9 @@ package main.trabalho_01.lista;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
+/**
+ * @author Diogo Jayme
+ */
 public class GrafoLista {
 
     public List<Vertice> grafoLista = new ArrayList<>();

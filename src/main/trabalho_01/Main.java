@@ -4,7 +4,9 @@ import main.trabalho_01.lista.GrafoLista;
 import main.trabalho_01.matriz.GrafoMatriz;
 
 import java.util.Scanner;
-
+/**
+ * @author Diogo Jayme
+ */
 public class Main {
 
 
