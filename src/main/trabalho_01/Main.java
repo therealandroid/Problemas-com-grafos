@@ -1,8 +1,12 @@
-import lista.GrafoLista;
-import matriz.GrafoMatriz;
+package main.trabalho_01;
+
+import main.trabalho_01.lista.GrafoLista;
+import main.trabalho_01.matriz.GrafoMatriz;
 
 import java.util.Scanner;
-
+/**
+ * @author Diogo Jayme
+ */
 public class Main {
 
 
@@ -55,7 +59,7 @@ public class Main {
                     x = scanner.nextInt();
                     y = scanner.nextInt();
                     grafoMatriz.insereAresta(x, y);
-                    System.out.println("lista.Aresta inserida:" + x + "-" + y);
+                    System.out.println("main.trabalho_01.lista.Aresta inserida:" + x + "-" + y);
                     break;
                 case 3:
                     if (grafoMatriz == null) {
@@ -66,7 +70,7 @@ public class Main {
                     x = scanner.nextInt();
                     y = scanner.nextInt();
                     grafoMatriz.removeAresta(x, y);
-                    System.out.println("lista.Aresta removida:" + x + "-" + y);
+                    System.out.println("main.trabalho_01.lista.Aresta removida:" + x + "-" + y);
                     break;
                 case 4:
                     if (grafoMatriz == null) {
@@ -79,9 +83,9 @@ public class Main {
                     boolean existe = grafoMatriz.existeAresta(x, y);
 
                     if (existe) {
-                        System.out.println("\nlista.Aresta : " + x + "-" + y + " existe");
+                        System.out.println("\nmain.trabalho_01.lista.Aresta : " + x + "-" + y + " existe");
                     } else {
-                        System.out.println("\nlista.Aresta : " + x + "-" + y + " nao encontrada");
+                        System.out.println("\nmain.trabalho_01.lista.Aresta : " + x + "-" + y + " nao encontrada");
                     }
 
                     break;
@@ -170,7 +174,7 @@ public class Main {
                         grafoLista.insereVertice(key);
                     }
 
-                    System.out.println("Grafo lista criado!");
+                    System.out.println("Grafo main.trabalho_01.lista criado!");
                     System.out.println();
                     break;
                 case 2:
@@ -309,7 +313,7 @@ public class Main {
 
         System.out.println("Grafo Caminho");
         GrafoLista L_CAMINHO = new GrafoLista();
-        L_CAMINHO.generateList();//cria uma lista com 10 vertices
+        L_CAMINHO.generateList();//cria uma main.trabalho_01.lista com 10 vertices
         L_CAMINHO.insereAresta("A", "B");
         L_CAMINHO.insereAresta("A", "C");
         L_CAMINHO.insereAresta("A", "D");
@@ -322,7 +326,7 @@ public class Main {
 
         System.out.println("Grafo ciclo");
         GrafoLista L_CICLO = new GrafoLista();
-        L_CICLO.generateList();//cria uma lista com 10 vertices
+        L_CICLO.generateList();//cria uma main.trabalho_01.lista com 10 vertices
         L_CICLO.insereAresta("A", "B");
         L_CICLO.insereAresta("B", "C");
         L_CICLO.insereAresta("C", "D");
