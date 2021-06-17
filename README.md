@@ -27,8 +27,4 @@ e para sair do menu a opcao (0)
 
 Caso escolha main.trabalho_01.matriz ou main.trabalho_01.lista (op 1 ou 2) outro menu sera apresentado com TODAS as opcoes de operacoes possiveis para cada tipo de grafo.
 
-### Informacoes do aluno
-
-Aluno: Diogo Jayme
-Matricula: 201300681
 
